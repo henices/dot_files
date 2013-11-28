@@ -1,0 +1,75 @@
+Xft.dpi:96
+
+! general setting
+URxvt.multichar_encoding:utf-8
+Xterm.termName:urxvt-256color
+
+!设置背景色
+URxvt.background:[80]black
+!设置颜色深度
+URxvt.depth: 32
+
+URxvt.loginShell:true
+!URxvt.background:Black
+URxvt.foreground:White
+URxvt.scrollBar:true
+URxvt.scrollBar_right:true
+URxvt.scrollBar_floating:false
+URxvt.scrollstyle:plain
+URxvt.scrollTtyOutput:True
+URxvt.scrollTtyKeypress:True
+URxvt.scrollWithBuffer:false
+
+
+! input
+URxvt.inputMethod:fcitx
+
+! Use shift+pageup/down to scroll in screen
+URxvt.secondaryScroll:true
+URxvt.tintColor:grey
+URxvt.shading:500
+URxvt.preeditType:Root
+URxvt.borderLess:false
+
+! how many lines you want it to save per session
+URxvt.saveLines:32766
+URxvt.troughColor:#000000
+URxvt.scrollColor:#222222
+
+URxvt.font:xft:DejaVuSansMono:size=12:style:Regular:antialias=true, \
+           xft:文泉驿等宽微米黑:size=12:style:Regular:antialias=true
+URxvt.boldfont:xft:DejaVuSansMono:size=12:style:Bold:antialias=true, \
+           xft:文泉驿等宽微米黑:size=12:style:Bold:antialias=true
+
+
+! with this set to true, when an app sends a bell to the terminal, awesome hilights the appropriate tag(s) 
+URxvt.urgentOnBell: true
+
+!redefine color to use tango theme in vim
+
+!Black
+URxvt.color0:           #000000
+URxvt.color8:           #555753
+!Red
+URxvt.color1:           #CC0000
+URxvt.color9:           #EF2929
+!Green
+URxvt.color2:           #4E9A06
+URxvt.color10:          #8AE234
+!Yellow
+URxvt.color3:           #C4A000
+URxvt.color11:          #FCE94F
+!Blue
+URxvt.color4:           #3465A4
+URxvt.color12:          #729FCF
+!Magenta
+URxvt.color5:           #75507B
+URxvt.color13:          #AD7FA8
+!Cyan
+URxvt.color6:           #06989A
+URxvt.color14:          #34E2E2
+!White
+URxvt.color7:           #D3D7CF
+URxvt.color15:          #EEEEEC
+
+Rxvt.perl-ext-common: default,matcher,clipboard
