@@ -1,0 +1,59 @@
+# 这是配置那个tab bar
+
+defscrollback 10000
+
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.bW}%-w%{.rY}%n %t%{-}%+w %=%{..G} %H(%l) %{..Y} %Y/%m/%d %c:%s "
+#hardstatus string "%{.bW}%-w%{.rY}%n %t%{-}%+w "
+
+
+termcapinfo xterm|rxvt|urxvt ti@:te@
+
+# 指定编码
+
+defencoding utf-8
+encoding utf-8 utf-8
+
+# screen里面的所有进程退出，screen就自动退出
+autodetach on               # default: on
+
+# 退出vim/nano之后自动刷新屏幕
+altscreen on
+
+# 定义screen的功能键为Ctrl-Z。向终端输入Ctrl-Z时应按 Ctrl-Z z。
+escape z
+
+defscrollback 1024
+
+# 启动等待，显示版本
+msgwait 2
+version
+
+# 启动信息
+startup_message off # default: on
+
+# 启用beep报错
+vbell off
+
+# 默认的shell，不设置的话就是bash
+#shell zsh
+
+##    Keybindings    ##
+# bind F7 to create a new screen
+bindkey -k k7 screen
+
+# bind F8 to kill current screen window
+bindkey -k k8 kill
+
+# bind F9 to detach screen session
+bindkey -k k9 detach
+
+# F10改标题
+bindkey -k k; title
+
+# F11左边的tab
+bindkey -k F1 prev
+
+# F12右边的tab
+bindkey -k F2 next
