@@ -44,9 +44,9 @@ URxvt.saveLines:32766
 URxvt.troughColor:#000000
 URxvt.scrollColor:#222222
 
-URxvt.font:xft:DejaVuSansMono:size=13:style:Regular:antialias=true, \
+URxvt.font:xft:Monaco:size=13:style:Regular:antialias=true, \
            xft:文泉驿等宽微米黑:size=13:style:Regular:antialias=true
-URxvt.boldfont:xft:DejaVuSansMono:size=13:style:Bold:antialias=true, \
+URxvt.boldfont:xft:Monaco:size=13:style:Bold:antialias=true, \
            xft:文泉驿等宽微米黑:size=13:style:Bold:antialias=true
 
 
@@ -80,4 +80,4 @@ URxvt.color14:          #34E2E2
 URxvt.color7:           #D3D7CF
 URxvt.color15:          #EEEEEC
 
-Rxvt.perl-ext-common: default,matcher,clipboard
+URxvt.perl-ext-common: default,clipboard
