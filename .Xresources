@@ -43,10 +43,10 @@ URxvt.borderLess:false
 URxvt.saveLines:65535
 
 ! urxvt font
-URxvt.font:xft:Monaco:size=13:style:Regular:antialias=true, \
-           xft:文泉驿等宽微米黑:size=13:style:Regular:antialias=true
-URxvt.boldfont:xft:Monaco:size=13:style:Bold:antialias=true, \
-           xft:文泉驿等宽微米黑:size=13:style:Bold:antialias=true
+URxvt.font:xft:Monaco:pixelsize=18:style:Regular:antialias=true, \
+           xft:文泉驿等宽微米黑:pixelsize=18:style:Regular:antialias=true
+URxvt.boldfont:xft:Monaco:pixelsize=18:style:Bold:antialias=true, \
+           xft:文泉驿等宽微米黑:pixelsize=18:style:Bold:antialias=true
 
 #include ".Xdefaults.d/colors/molokai"
 
