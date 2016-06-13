@@ -43,15 +43,15 @@ URxvt.borderLess:false
 URxvt.saveLines:65535
 
 ! urxvt font
-URxvt.font:xft:Monaco:pixelsize=18:style:Regular:antialias=true, \
-           xft:文泉驿等宽微米黑:pixelsize=18:style:Regular:antialias=true
-URxvt.boldfont:xft:Monaco:pixelsize=18:style:Bold:antialias=true, \
-           xft:文泉驿等宽微米黑:pixelsize=18:style:Bold:antialias=true
+URxvt.font:xft:DejaVu Sans Mono:pixelsize=15:style:Regular:antialias=true, \
+           xft:文泉驿等宽微米黑:pixelsize=15:style:Regular:antialias=true
+URxvt.boldfont:xft:Monaco:pixelsize=14:styl5:Bold:antialias=true, \
+           xft:文泉驿等宽微米黑:pixelsize=15:style:Bold:antialias=true
 
-#include ".Xdefaults.d/colors/molokai"
+#include ".Xdefaults.d/colors/jellybeans"
 
 ! misc
 URxvt.urgentOnBell: true
 
 ! urxvt extension
-URxvt.perl-ext-common: default,clipboard
+URxvt.perl-ext-common: default,selection-to-clipboard
