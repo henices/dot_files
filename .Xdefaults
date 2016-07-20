@@ -3,7 +3,6 @@ Xft.antialias:1
 Xft.autohint: 0
 Xft.hinting:1
 Xft.hintstyle:hintslight
-!Xft.hintstyle:hintfull
 Xft.rgba:rgb
 Xft.lcdfilter:lcddefault
 
@@ -12,46 +11,43 @@ Xft.lcdfilter:lcddefault
 URxvt.multichar_encoding:utf-8
 URxvt.termName:rxvt-unicode-256color
 URxvt.loginShell:true
-URxvt.depth: 32
-URxvt.foreground:White
-URxvt.background:[80]black
-URxvt.geometry:80x25
+URxvt.geometry:160x50
 
-! urxvt scrollbar
-URxvt.scrollBar:true
-URxvt.secondaryScroll:true
-URxvt.scrollBar_right:true
-URxvt.scrollBar_floating:false
-URxvt.scrollstyle:plain
-URxvt.scrollTtyOutput:True
-URxvt.scrollTtyKeypress:True
-URxvt.scrollWithBuffer:false
-URxvt.scrollColor:#222222
+URxvt*borderLess:false
+URxvt*cursorBlink:true
+URxvt*jumpScroll:true
+URxvt*scrollBar:false
+URxvt*scrollTtyOutput:false
+URxvt*scrollTtyKeypress:true
+
+! Cursor
+URxvt.cursorBlink:true
+URxvt.cursorUnderline:false
+
+! Pointer
+URxvt.pointerBlank:true
 
 ! input
 URxvt.inputMethod:fcitx
 
 ! urxvt look
 URxvt.transparent:false
-URxvt.tintColor:grey
-URxvt.troughColor:#000000
-URxvt.shading:500
-URxvt.preeditType:Root
-URxvt.borderLess:false
 
 ! how many lines you want it to save per session
 URxvt.saveLines:65535
 
 ! urxvt font
-URxvt.font:xft:DejaVu Sans Mono:pixelsize=15:style:Regular:antialias=true, \
-           xft:文泉驿等宽微米黑:pixelsize=15:style:Regular:antialias=true
-URxvt.boldfont:xft:Monaco:pixelsize=14:styl5:Bold:antialias=true, \
-           xft:文泉驿等宽微米黑:pixelsize=15:style:Bold:antialias=true
+URxvt.font:xft:DejaVu Sans Mono:pixelsize=18:style:Regular:antialias=true, \
+           xft:文泉驿等宽微米黑:pixelsize=18:style:Regular:antialias=true
+URxvt.boldfont:xft:DejaVu Sans Mono:pixelsize=18:style:Bold:antialias=true, \
+           xft:文泉驿等宽微米黑:pixelsize=18:style:Bold:antialias=true
 
-#include ".Xdefaults.d/colors/jellybeans"
+! theme
+#include ".Xdefaults.d/colors/solarized_dark"
 
 ! misc
-URxvt.urgentOnBell: true
+URxvt*urgentOnBell:true
+URxvt*visualBell:false
 
 ! urxvt extension
 URxvt.perl-ext-common: default,selection-to-clipboard
