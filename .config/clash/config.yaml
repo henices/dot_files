@@ -60,12 +60,12 @@ rule-providers:
 #    path: ./ruleset/private.yaml
 #    interval: 86400
 #
-#  gfw:
-#    type: http
-#    behavior: domain
-#    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
-#    path: ./ruleset/gfw.yaml
-#    interval: 86400
+  gfw:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    path: ./ruleset/gfw.yaml
+    interval: 86400
 #
 #  greatfire:
 #    type: http
@@ -112,6 +112,7 @@ rule-providers:
 rules:
 
   - RULE-SET,lancidr,DIRECT
+  - RULE-SET,gfw,PROXY
   - GEOIP,CN,DIRECT
 
     # rule GEOSITE
@@ -122,7 +123,6 @@ rules:
   - GEOSITE,microsoft@cn,DIRECT
   - GEOSITE,facebook,PROXY
   - GEOSITE,youtube,PROXY
-  - GEOSITE,gfw,PROXY
   - GEOSITE,geolocation-cn,DIRECT
   - GEOSITE,geolocation-!cn,PROXY
 
