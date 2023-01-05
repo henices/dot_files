@@ -10,7 +10,7 @@ proxies:
     server: 127.0.0.1
     port: 9999
 
-#rule-providers:
+rule-providers:
 #  reject:
 #    type: http
 #    behavior: domain
@@ -95,12 +95,12 @@ proxies:
 #    path: ./ruleset/cncidr.yaml
 #    interval: 86400
 #
-#  lancidr:
-#    type: http
-#    behavior: ipcidr
-#    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
-#    path: ./ruleset/lancidr.yaml
-#    interval: 86400
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
 #
 #  applications:
 #    type: http
@@ -111,8 +111,8 @@ proxies:
 #
 rules:
 
-  - GEOIP,lan,DIRECT
-  - GEOIP,cn,DIRECT
+  - RULE-SET,lancidr,DIRECT
+  - GEOIP,CN,DIRECT
 
     # rule GEOSITE
   - GEOSITE,category-ads-all,REJECT
@@ -125,6 +125,7 @@ rules:
   - GEOSITE,gfw,PROXY
   - GEOSITE,geolocation-cn,DIRECT
   - GEOSITE,geolocation-!cn,PROXY
+
     # source IPCIDR condition for all rules in gateway proxy
     #- GEOSITE,geolocation-!cn,REJECT,192.168.1.88/32,192.168.1.99/32
 
