@@ -111,6 +111,7 @@ rule-providers:
 #
 rules:
 
+  - DOMAIN-SUFFIX,bing.com,PROXY
   - RULE-SET,lancidr,DIRECT
   - RULE-SET,cncidr,DIRECT
   - RULE-SET,gfw,PROXY
