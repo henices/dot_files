@@ -1,7 +1,28 @@
 mixed-port: 7890
-ipv6: true
+#socks-port: 7890
+ipv6: false
 mode: rule
-log-level: info
+log-level: debug
+global-client-fingerprint: chrome
+
+sniffer:
+  enable: false
+  sniff:
+    TLS:
+      ports: [443]
+
+dns:
+  enable: true
+  listen: 127.0.0.1:53
+  ipv6: false
+  use-hosts: true
+  enhanced-mode: redir-host
+  nameserver-policy:
+    'geosite:cn':
+      - 223.5.5.5
+    '+.intra': '192.168.1.4'
+  nameserver:
+    - 'https://1.0.0.1/dns-query'
 
 proxies:
 
@@ -112,6 +133,7 @@ rule-providers:
 rules:
 
   - DOMAIN-SUFFIX,bing.com,PROXY
+  - DOMAIN-SUFFIX,nytimes.com,PROXY
   - RULE-SET,lancidr,DIRECT
   - RULE-SET,cncidr,DIRECT
   - RULE-SET,gfw,PROXY
