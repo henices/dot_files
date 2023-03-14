@@ -2,8 +2,8 @@ mixed-port: 7890
 #socks-port: 7890
 ipv6: false
 mode: rule
-log-level: debug
-global-client-fingerprint: chrome
+log-level: info
+global-client-fingerprint: edge
 
 sniffer:
   enable: false
@@ -116,12 +116,12 @@ rule-providers:
     path: ./ruleset/cncidr.yaml
     interval: 86400
 
-  lancidr:
-    type: http
-    behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
-    path: ./ruleset/lancidr.yaml
-    interval: 86400
+#  lancidr:
+#    type: http
+#    behavior: ipcidr
+#    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+#    path: ./ruleset/lancidr.yaml
+#    interval: 86400
 #
 #  applications:
 #    type: http
@@ -132,9 +132,22 @@ rule-providers:
 #
 rules:
 
+#LAN
+  - DOMAIN-SUFFIX,local,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+
+#Bing
   - DOMAIN-SUFFIX,bing.com,PROXY
+
+#OpenAi
+  - DOMAIN-SUFFIX,openai.com,PROXY
+  - DOMAIN-SUFFIX,chat.openai.com,PROXY
+  - DOMAIN-SUFFIX,ai.com,PROXY
+
   - DOMAIN-SUFFIX,nytimes.com,PROXY
-  - RULE-SET,lancidr,DIRECT
   - RULE-SET,cncidr,DIRECT
   - RULE-SET,gfw,PROXY
   - GEOIP,CN,DIRECT
