@@ -3,7 +3,14 @@ mixed-port: 7890
 ipv6: false
 mode: rule
 log-level: info
-global-client-fingerprint: edge
+global-client-fingerprint: firefox
+
+geodata-mode: true
+
+geox-url:
+  geoip: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat"
+  geosite: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat"
+  mmdb: "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
 
 sniffer:
   enable: false
@@ -20,7 +27,6 @@ dns:
   nameserver-policy:
     'geosite:cn':
       - 223.5.5.5
-    '+.intra': '192.168.1.4'
   nameserver:
     - 'https://1.0.0.1/dns-query'
 
@@ -147,10 +153,15 @@ rules:
   - DOMAIN-SUFFIX,chat.openai.com,PROXY
   - DOMAIN-SUFFIX,ai.com,PROXY
 
+#Media
   - DOMAIN-SUFFIX,nytimes.com,PROXY
-  - RULE-SET,cncidr,DIRECT
+
   - RULE-SET,gfw,PROXY
+
   - GEOIP,CN,DIRECT
+  - GEOIP,LAN,DIRECT
+
+  - RULE-SET,cncidr,DIRECT
 
     # rule GEOSITE
   - GEOSITE,category-ads-all,REJECT
